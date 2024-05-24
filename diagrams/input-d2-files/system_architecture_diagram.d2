@@ -1,0 +1,47 @@
+# Theme of Diagram
+vars: {
+  d2-config: {
+    # Terminal theme code
+    theme-id: 200
+  }
+}
+
+title: |md
+# System Architecture Diagram v1.0.0
+| {near: top-center}
+
+direction: right
+
+Blender: {
+    shape: image
+    icon: ../icons/blender.svg
+}
+
+Godot: {
+    shape: image
+    icon: ../icons/godot.svg
+}
+
+Github: {
+    shape: image
+    icon: https://icons.terrastruct.com/dev/github.svg
+}
+
+Project Manager: {
+    shape: image
+    icon: ../icons/jira.svg
+}
+
+Blender -> Assets: Export Models
+Blender -> Animations: Export Animations
+Blender -> Textures: Export Textures
+Assets -> Godot: Import Models
+Animations -> Godot: Import Animations
+Textures -> Godot: Import Textures
+SoundEffects -> Godot: Import Sound Effects
+Godot -> Scripts: Create GD scripts
+Scripts -> Godot: Use Game Scripts
+Blender -> GitHub: Commit 3D Models
+GitHub -> Godot: Sync Game Project
+Project Manager -> GitHub: Track Issues and Tasks
+Godot -> GitHub: Commit Game Project

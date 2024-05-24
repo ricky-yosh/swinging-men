@@ -1,0 +1,21 @@
+# Theme of Diagram
+vars: {
+  d2-config: {
+    # Terminal theme code
+    theme-id: 200
+  }
+}
+
+title: |md
+# Sequence Diagram v1.0.0
+| {near: top-center}
+
+shape: sequence_diagram
+
+Player -> GameController: Press Swing Button
+GameController -> Character: Start Swinging
+Character -> GameController: Swing Animation
+GameController -> ScoreSystem: Update
+ScoreSystem -> GameController: Calculate Points
+GameController -> ScoreSystem: Update Score
+ScoreSystem -> UI: Show Updated Score
