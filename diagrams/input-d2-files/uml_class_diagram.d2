@@ -1,0 +1,60 @@
+# Theme of Diagram
+vars: {
+  d2-config: {
+    # Terminal theme code
+    theme-id: 200
+  }
+}
+
+title: |md
+# UML Class Diagram v1.0.0
+| {near: top-center}
+
+Character: {
+    shape: class
+    + String name
+    + int health
+    + void swing()
+    + void takeDamage(int amount)
+}
+
+SwingMechanic: {
+    shape: class
+    + Character character
+    + float swingDuration
+    + void startSwing()
+    + void endSwing()
+}
+
+ScoreSystem: {
+    shape: class
+    + int score
+    + void calculatePoints(float duration)
+    + void updateScore()
+}
+
+GameUI: {
+    shape: class
+    + void displayScore(int score)
+    + void updateHealth(int health)
+}
+
+GameController: {
+    shape: class
+    + Character player1
+    + Character player2
+    + SwingMechanic swingMechanic
+    + ScoreSystem scoreSystem
+    + GameUI gameUI
+    + void startGame()
+    + void updateGame()
+    + void endGame()
+}
+
+Character <- SwingMechanic
+SwingMechanic --> ScoreSystem
+ScoreSystem --> GameUI
+GameController --> Character
+GameController --> SwingMechanic
+GameController --> ScoreSystem
+GameController --> GameUI
