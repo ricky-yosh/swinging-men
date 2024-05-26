@@ -1,0 +1,30 @@
+# Theme of Diagram
+vars: {
+    d2-config: {
+        # Terminal theme code
+        theme-id: 200
+    }
+}
+
+title: |md
+# Make a Cube v1.0.0
+1. Add **StaticBody3D**: Add a **StaticBody3D** node.
+2. Add **MeshInstance**: Add a **MeshInstance** as a child of **StaticBody3D**, and assign it a **CubeMesh**.
+3. Add **CollisionShape3D**: Add a **CollisionShape3D** under **StaticBody3D**, and assign it a **BoxShape**.
+> This setup creates a 3D cube with collision detection in Godot.
+| {near: center-left}
+
+direction: right
+
+StaticBody3D: {
+    grid-columns: 1
+    icon: https://raw.githubusercontent.com/godotengine/godot/be56cab58c056c074d1e02cd0b38641204e39f41/editor/icons/StaticBody3D.svg
+
+    MeshInstance3D: {
+        icon: https://raw.githubusercontent.com/godotengine/godot/be56cab58c056c074d1e02cd0b38641204e39f41/editor/icons/MeshInstance3D.svg
+    }
+
+    CollisionShape3D {
+        icon: https://raw.githubusercontent.com/godotengine/godot/be56cab58c056c074d1e02cd0b38641204e39f41/editor/icons/CollisionShape3D.svg
+    }
+}
