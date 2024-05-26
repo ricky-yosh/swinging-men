@@ -1,0 +1,114 @@
+# Theme of Diagram
+vars: {
+    d2-config: {
+        # Terminal theme code
+        theme-id: 200
+        # D2 Layout Enginer
+        layout-engine: elk
+    }
+}
+
+title: |md
+# Godot File Structure v1.0.0
+The most common approach is to group assets as close to scenes as possible; when a project grows, it makes it more maintainable.\
+Godot Documentation recommends that you maintain a `docs\`, `models\`, `characters\`, `levels\` kind of structure.
+> Note: `docs\` would be for `.gdignore\` and `learning.html\` files. Not really necessary unless its for larger projects
+
+Below is an example of what a possible file structure would look like.
+| {near: top-center}
+
+direction: right
+
+Main Folder: "res://" {
+    shape: image
+    icon: https://icons.terrastruct.com/essentials%2F245-folder.svg
+}
+
+models/: {
+    shape: image
+    icon: https://icons.terrastruct.com/essentials%2F245-folder.svg
+}
+
+characters/: {
+    shape: image
+    icon: https://icons.terrastruct.com/essentials%2F245-folder.svg
+}
+
+levels/: {
+    shape: image
+    icon: https://icons.terrastruct.com/essentials%2F245-folder.svg
+}
+
+addons/: {
+    shape: image
+    icon: https://icons.terrastruct.com/essentials%2F245-folder.svg
+}
+
+mountains/: {
+    shape: image
+    icon: https://icons.terrastruct.com/essentials%2F245-folder.svg
+}
+
+climber_1/: {
+    shape: image
+    icon: https://icons.terrastruct.com/essentials%2F245-folder.svg
+}
+
+climber_2/: {
+    shape: image
+    icon: https://icons.terrastruct.com/essentials%2F245-folder.svg
+}
+
+MainLevel: {
+    style.fill: transparent
+    text: |md
+    This can be a Scene that contains all\
+    the elements for a level.
+    |
+}
+
+ExtraLevels: {
+    style.fill: transparent
+    text: |md
+    More levels can go in here. Code will\
+    be used to transition between levels.
+    |
+}
+
+Third-Party Resources: {
+    style.fill: transparent
+    text: |md
+    This makes it easier to keep track of what\
+    resources are third-party. All should be\
+    kept in a `addons/` folder.
+    |
+}
+
+Notes on Best Practices: {
+    style.fill: transparent
+    text: |md
+    ## `snake_case`
+    1. Folders
+    2. File Names
+    > This helps case sensitivity issues
+    ## `PascalCase`
+    1. Node Names
+    2. C# Scripts (since they are\
+    named after class names)
+    |
+}
+
+Main Folder -> models/
+Main Folder -> characters/
+Main Folder -> levels/
+Main Folder -> addons/
+
+models/ -> mountains/
+
+characters/ -> climber_1/
+characters/ -> climber_2/
+
+levels/ -> MainLevel
+levels/ -> ExtraLevels
+
+addons/ -> Third-Party Resources

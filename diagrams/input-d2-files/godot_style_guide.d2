@@ -1,0 +1,189 @@
+# Theme of Diagram
+vars: {
+    d2-config: {
+        # Terminal theme code
+        theme-id: 200
+    }
+}
+
+title: |md
+# Godot Style Guide v1.0.0
+This is taken from [the Godot Engine 4.2 Documentation](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html) and should help GDScript structure.\
+These are not hard rulebooks and since its close to Python it is inspired by Python's programming style guide: [PEP 8](https://peps.python.org/pep-0008/). 
+| {near: top-center}
+
+Container: "" {
+    grid-columns: 3
+    style.fill: transparent
+    style.stroke: transparent
+
+    File Names: {
+        direction: right
+
+        description: |md
+            **File names** should be written in `snake_case`
+        |
+
+        code_section: |`python
+            # example file name
+            cube_with_collision.gd
+        `|
+    }
+
+    Class Names: {
+        direction: right
+
+        description: |md
+        **Class names** should be written in `PascalCase`
+        |
+
+        code_section: |`python
+        # example Class name
+        class_name PlayerCharacter
+        `|
+    }
+
+    Node Names: {
+        direction: right
+
+        description: |md
+        **Node names** should be written in `PascalCase`
+        |
+
+        code_section: |`python
+        # example Class name in code
+        extends CharacterBody3D
+        `|
+
+        screenshot_text: |md
+        Screenshot of nodes used inside of Godot.
+        |
+
+        screenshot: "" {
+            shape: image
+            icon: ./images/node_names_example.png
+            width: 300
+            height: 150
+        }
+    }
+
+    Functions: {
+        direction: right
+
+        description: |md
+        **Function names** should be written in `snake_case`
+        |
+
+        code_section: |`python
+        # example function name
+        func load_level():
+        `|
+    }
+
+    Variables: {
+        direction: right
+
+        description: |md
+        **Variable names** should be written in `snake_case`
+        |
+
+        code_section: |`python
+        # example of variable in code
+        var xp_collected
+        `|
+    }
+
+    Signals: {
+        direction: right
+
+        description: |md
+        **Signal names** should be written in `snake_case`
+        > NOTE: Signals should be written in the past tense.\
+        > (e.g. score_changed)
+        |
+
+        code_section: |`python
+        # example of a signal
+        signal door_opened
+        `|
+    }
+
+    Constants: {
+        direction: right
+
+        description: |md
+        **Constant names** should be written in `CONSTANT_CASE`
+        |
+
+        code_section: |`python
+        # example constant variable
+        const MAX_SPEED = 200
+        `|
+    }
+
+    Enum Names: {
+        direction: right
+
+        description: |md
+        **Enum names** should be written in `PascalCase`
+        |
+
+        code_section: |`python
+        # example of an enum name
+        enum Element {
+            ...
+        }
+        `|
+    }
+
+    Enum Members: {
+        direction: right
+
+        description: |md
+        **Enum members** should be written in `CONSTANT_CASE`
+        |
+
+        code_section: |`python
+        # example of full enum structure
+        enum Element {
+            EARTH, # example of member
+            WATER,
+            AIR,
+            FIRE,
+        }
+        `|
+    }
+
+    Code Order: {
+        direction: right
+
+        description: |md
+        This is the recommended way to organize GDScript
+        |
+
+        code_section: |`python
+            01. @tool
+            02. class_name
+            03. extends
+            04. # docstring
+
+            05. signals
+            06. enums
+            07. constants
+            08. @export variables
+            09. public variables
+            10. private variables
+            11. @onready variables
+
+            12. optional built-in virtual
+            _init method
+            13. optional built-in virtual
+            _enter_tree() method
+            14. built-in virtual _ready method
+            15. remaining built-in virtual methods
+            16. public methods
+            17. private methods
+            18. subclasses
+        `|
+    }
+}
