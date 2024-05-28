@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1mtpc5ln20h7"]
+
+[ext_resource type="PackedScene" uid="uid://bu15snf8uhnbb" path="res://Scenes/World/mountains.tscn" id="1_ycpiu"]
+[ext_resource type="PackedScene" uid="uid://khuciqube765" path="res://Scenes/Player/character.tscn" id="2_w5opl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b7mjn"]
+
+[sub_resource type="Sky" id="Sky_n45ll"]
+sky_material = SubResource("ProceduralSkyMaterial_b7mjn")
+
+[sub_resource type="Environment" id="Environment_0iptg"]
+background_mode = 2
+sky = SubResource("Sky_n45ll")
+
+[node name="Main" type="Node3D"]
+
+[node name="Mountains" parent="." instance=ExtResource("1_ycpiu")]
+
+[node name="Character" parent="." instance=ExtResource("2_w5opl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.08667)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.6885, 29.6376)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0iptg")
