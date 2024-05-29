@@ -7,7 +7,7 @@ vars: {
 }
 
 title: |md
-# System Architecture Diagram v2.0.0
+# System Architecture Diagram v2.0.1
 | {near: top-center}
 
 direction: down
@@ -30,6 +30,11 @@ Blender: {
 Godot: {
     shape: image
     icon: ./icons/godot.svg
+}
+
+Sourcetree: {
+  shape: image
+  icon: ./icons/sourcetree.svg
 }
 
 Github: {
@@ -59,13 +64,19 @@ Models -> Blender: Design Models
 Blender -> Assets: Export Models
 Blender -> Animations: Export Animations
 Blender -> Textures: Export Textures
+Blender -> Sourcetree: Commit 3D Models
+
+Scripts -> Godot: Use Game Scripts
 Assets -> Godot: Import Models
 Animations -> Godot: Import Animations
 Textures -> Godot: Import Textures
 SoundEffects -> Godot: Import Sound Effects
+Sourcetree -> Godot: See changes from team
+
 Godot -> Scripts: Create GD scripts
-Scripts -> Godot: Use Game Scripts
-Blender -> GitHub: Commit 3D Models
-GitHub -> Godot: Sync Game Project
-Project Manager -> GitHub: Track Issues and Tasks
-Godot -> GitHub: Commit Game Project
+Godot -> Sourcetree: Create commits
+
+Project Manager -> GitHub: Track Issues and Tasks 
+
+GitHub -> Sourcetree: Fetch, Prune & Pull
+Sourcetree -> Github: Pull Requests
