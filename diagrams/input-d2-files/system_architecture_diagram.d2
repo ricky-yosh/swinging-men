@@ -7,10 +7,20 @@ vars: {
 }
 
 title: |md
-# System Architecture Diagram v1.0.0
+# System Architecture Diagram v2.0.0
 | {near: top-center}
 
-direction: right
+direction: down
+
+Krita: {
+  shape: image
+  icon: ./icons/krita_logo.svg
+}
+
+Storyboarder: {
+  shape: image
+  icon: ./images/storyboarder_icon.png
+}
 
 Blender: {
     shape: image
@@ -24,13 +34,27 @@ Godot: {
 
 Github: {
     shape: image
-    icon: https://icons.terrastruct.com/dev/github.svg
+    icon: ./icons/github_white.svg
 }
 
 Project Manager: {
     shape: image
     icon: ./icons/jira.svg
 }
+
+Storyboarder -> Storyboards: Draw
+Storyboards -> AandR: Export as reference for 3d artist
+Krita -> Concept Art: Create concept art
+Concept Art -> Material: lighting, colors, textures
+Concept Art -> Texture: 2d patterns
+Krita -> Models: Create Character Turnaround
+Krita -> Models: Character Iterations
+
+AandR: "Animation & Rigging"
+AandR -> Blender: Design rigs and animations
+Texture -> Blender: Import Textures
+Material -> Blender: Import Materials
+Models -> Blender: Design Models
 
 Blender -> Assets: Export Models
 Blender -> Animations: Export Animations
