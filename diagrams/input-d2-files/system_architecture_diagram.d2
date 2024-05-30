@@ -7,10 +7,15 @@ vars: {
 }
 
 title: |md
-# System Architecture Diagram v2.0.1
+# System Architecture Diagram v2.1.0
 | {near: top-center}
 
 direction: down
+
+PureRef: {
+  shape: image
+  icon: ./icons/pureref.svg
+}
 
 Krita: {
   shape: image
@@ -46,6 +51,11 @@ Project Manager: {
     shape: image
     icon: ./icons/jira.svg
 }
+
+PureRef -> Reference Board: Create mood board
+PureRef -> Reference Board: Inpiration board
+
+Reference Board -> Krita: Ideas for designs
 
 Storyboarder -> Storyboards: Draw
 Storyboards -> AandR: Export as reference for 3d artist
