@@ -86,6 +86,6 @@ curl -fsSL https://d2lang.com/install.sh | sh -s -- --uninstall
 #### Jonathan Yoshioka
 - Github: https://github.com/JonYoshioka
 - LinkedIn: https://www.linkedin.com/in/jonathan-yoshioka/
-###
+#### Joshua Yoshioka
 - Github: https://github.com/JayYosh
 - LinkedIn: https://www.linkedin.com/in/joshua-yoshioka/
