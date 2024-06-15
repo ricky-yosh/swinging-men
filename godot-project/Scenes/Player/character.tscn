@@ -2,23 +2,25 @@
 
 [ext_resource type="Script" path="res://Scenes/Player/character.gd" id="1_o6jvs"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lv21j"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_awvuc"]
 albedo_color = Color(0.82054, 0.548397, 0.74877, 1)
 metallic = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_xmpeg"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_lv21j"]
-
 [node name="Character" type="CharacterBody3D"]
+disable_mode = 1
+collision_layer = 3
 script = ExtResource("1_o6jvs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_lv21j")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_overlay = SubResource("StandardMaterial3D_awvuc")
 mesh = SubResource("BoxMesh_xmpeg")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_lv21j")
 
 [node name="Camera_Controller" type="Node3D" parent="."]
 top_level = true
