@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1mtpc5ln20h7"]
+[gd_scene load_steps=7 format=3 uid="uid://b1mtpc5ln20h7"]
 
 [ext_resource type="PackedScene" uid="uid://bu15snf8uhnbb" path="res://Scenes/World/mountains.tscn" id="1_ycpiu"]
 [ext_resource type="PackedScene" uid="uid://khuciqube765" path="res://Scenes/Player/character.tscn" id="2_w5opl"]
+[ext_resource type="PackedScene" uid="uid://lu7i16hc6g7w" path="res://rope.tscn" id="3_sfynx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b7mjn"]
 
@@ -17,10 +18,13 @@ sky = SubResource("Sky_n45ll")
 [node name="Mountains" parent="." instance=ExtResource("1_ycpiu")]
 
 [node name="Character" parent="." instance=ExtResource("2_w5opl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.08667)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25205, 0.827107, 2.92797)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.6885, 29.6376)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0iptg")
+
+[node name="rope" parent="." instance=ExtResource("3_sfynx")]
+transform = Transform3D(-0.00420626, 0.999991, -1.04978e-05, -0.999988, -0.00420631, -0.0024958, -0.00249582, 8.71607e-13, 0.999997, -0.0843328, 3.81531, 3.3326)
